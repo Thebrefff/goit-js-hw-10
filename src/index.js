@@ -8,6 +8,7 @@ const DEBOUNCE_DELAY = 300;
 const countriesBox = document.querySelector('#search-box');
 const countriesList = document.querySelector('.country-list');
 const countriesData = document.querySelector('.country-info');
+const bodyBackground = document.querySelector("body");
 
 const cleanMarkup = ref => (ref.innerHTML = '');
 
@@ -70,4 +71,5 @@ const createInfo = data => {
 };
 
 countriesList.style.listStyleType = 'none';
+bodyBackground.style.background = '#D8CFCF';
 countriesBox.addEventListener('input', debounce(inputHandler, DEBOUNCE_DELAY));
